@@ -1,4 +1,4 @@
-FROM spitzenidee/postgresql_base:latest
+FROM spitzenidee/postgresql_base:10.1
 MAINTAINER Michael Spitzer <professa@gmx.net>
 
 #######################################################################
@@ -18,12 +18,14 @@ RUN apt-get update && apt-get install -y \
     wget https://github.com/timescale/timescaledb/archive/$TIMESCALEDB_VERSION.tar.gz && \
     tar xzvf $TIMESCALEDB_VERSION.tar.gz && \
     cd timescaledb-$TIMESCALEDB_VERSION && \
+    ./bootstrap && \
+    cd build/ && \
     make && \
     make install && \
 # Clean up again:
     cd / && \
     rm -rf /build && \
-    apt-get remove -y git cmake build-essential && \
+    apt-get remove -y wget cmake build-essential && \
     apt-get autoremove --purge -y && \
     apt-get clean && \
     apt-get purge && \
