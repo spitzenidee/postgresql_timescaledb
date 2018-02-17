@@ -3,7 +3,7 @@ MAINTAINER Michael Spitzer <professa@gmx.net>
 
 #######################################################################
 # Prepare the environment for the TimescaleDB compilation:
-ENV TIMESCALEDB_VERSION "0.7.0"
+ENV TIMESCALEDB_VERSION "0.8.0"
 
 #######################################################################
 # Prepare the build requirements for the rdkit compilation:
