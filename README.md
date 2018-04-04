@@ -3,7 +3,7 @@ A Dockerfile integrating Postgresql with TimescaleDB including some "base" exten
 
 # Extensions integrated
 * Everything in https://github.com/spitzenidee/postgresql_base
-* TimescaleDB 0.8.0 (https://github.com/timescale/timescaledb)
+* TimescaleDB 0.9.1 (https://github.com/timescale/timescaledb)
 
 # How to start and set up a container of "spitzenidee/postgresql_timescaledb"
 * `docker pull spitzenidee/postgresql_timescaledb:latest`
