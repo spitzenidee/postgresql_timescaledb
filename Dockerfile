@@ -1,13 +1,13 @@
-FROM spitzenidee/postgresql_base:10.3
+ROM spitzenidee/postgresql_base:10.3
 MAINTAINER Michael Spitzer <professa@gmx.net>
 
 #######################################################################
 # Prepare the environment for the TimescaleDB compilation:
-ENV TIMESCALEDB_VERSION "0.8.0"
+ENV TIMESCALEDB_VERSION "0.9.1"
 
 #######################################################################
 # Prepare the build requirements for the rdkit compilation:
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     postgresql-server-dev-all \
     wget \
     cmake \
