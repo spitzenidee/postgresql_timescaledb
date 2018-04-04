@@ -1,4 +1,4 @@
-FROM spitzenidee/postgresql_base:10.1
+FROM spitzenidee/postgresql_base:10.3
 MAINTAINER Michael Spitzer <professa@gmx.net>
 
 #######################################################################
