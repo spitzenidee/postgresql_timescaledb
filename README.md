@@ -3,7 +3,7 @@ A Dockerfile integrating Postgresql with TimescaleDB including some "base" exten
 
 # Extensions integrated
 * Everything in https://github.com/spitzenidee/postgresql_base
-* TimescaleDB 0.9.1 (https://github.com/timescale/timescaledb)
+* TimescaleDB 0.10.1 (https://github.com/timescale/timescaledb)
 
 # How to start and set up a container of "spitzenidee/postgresql_timescaledb"
 * `docker pull spitzenidee/postgresql_timescaledb:latest`
@@ -22,7 +22,7 @@ Use your favorite SQL command line or UI tool to create extensions in your selec
 * `CREATE IF NOT EXISTS EXTENSION http;`
 * `CREATE IF NOT EXISTS EXTENSION pg_cron;`
 * If applicable: `GRANT USAGE ON SCHEMA cron TO regular_pgsql_user;`
-* `CREATE IF NOT EXISTS EXTENSION timescaledb;`
+* `CREATE IF NOT EXISTS EXTENSION timescaledb;`, or if upgrading from a previous version `ALTER EXTENSION timescaledb UPDATE;`
 
 # Now for setting up POWA
 The following commands where taken from "https://github.com/dalibo/docker/blob/master/powa/powa-archivist/install_all.sql".
