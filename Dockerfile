@@ -1,9 +1,9 @@
-FROM spitzenidee/postgresql_base:10.4
+FROM spitzenidee/postgresql_base:11
 MAINTAINER Michael Spitzer <professa@gmx.net>
 
 #######################################################################
 # Prepare the environment for the TimescaleDB compilation:
-ENV TIMESCALEDB_VERSION "0.10.1"
+ENV TIMESCALEDB_VERSION "1.0.0-rc3"
 
 #######################################################################
 # Prepare the build requirements for the rdkit compilation:
