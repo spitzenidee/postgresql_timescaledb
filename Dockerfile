@@ -3,7 +3,7 @@ MAINTAINER Michael Spitzer <professa@gmx.net>
 
 #######################################################################
 # Prepare the environment for the TimescaleDB compilation:
-ENV TIMESCALEDB_VERSION "1.0.0-rc3"
+ENV TIMESCALEDB_VERSION "1.2.1"
 
 #######################################################################
 # Prepare the build requirements for the rdkit compilation:
@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     postgresql-server-dev-all \
     wget \
     cmake \
+    libssl-dev \
     build-essential && \
 # Install TimescaleDB:
     mkdir /build && \
